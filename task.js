@@ -3,13 +3,13 @@ const supabase = require("./supabaseClient");
 
 async function updateAllUserStatus() {
     const { data, error } = await supabase
-        .from("user")
+        .from("User")
         .update({
             status: "자율학습중입니다.",
             statuscategory: "SelfStudy",
         })
         .select()
-        .neq("id", null);
+        .neq("id", 0);
 
     const now = new Date().toLocaleString("ko-KR");
 
@@ -21,3 +21,5 @@ async function updateAllUserStatus() {
 }
 
 module.exports = updateAllUserStatus;
+
+updateAllUserStatus();

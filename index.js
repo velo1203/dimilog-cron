@@ -1,6 +1,5 @@
 const cron = require("node-cron");
 const updateAllUserStatus = require("./task");
-
 cron.schedule("0 17 * * *", () => {
     console.log("오전 5시: 작업 시작");
     updateAllUserStatus();
