@@ -21,5 +21,3 @@ async function updateAllUserStatus() {
 }
 
 module.exports = updateAllUserStatus;
-
-updateAllUserStatus();
